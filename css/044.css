@@ -293,5 +293,19 @@ body {
     .cont01 .list .item {
     width: calc(100% / 4 - 7px);
     }
-
 }/* min 641 */
+
+@media screen and (max-width:570px) {
+    .header .menu {
+        width: 100%;
+    }
+    
+    .header .menu .menu_close {
+        width: 25px;
+        margin: 20px;
+        img {
+            width: 100%;
+        }
+    }
+
+}
