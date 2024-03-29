@@ -28,10 +28,7 @@ body {
 }
 
 .inner {
-    /* 좌우 여백수치를 기준으로 작성 */
     width: calc(100% - 30px);
-    /* 전체비율 - 양쪽 여백의 합 */
-
     margin: 0 auto;
 }
 
@@ -41,6 +38,7 @@ body {
 
 .title p {
     font-size: 14px;
+    margin-bottom: 5px;
 }
 
 .title h3 {
@@ -56,12 +54,36 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 60px;
+    width: 50%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 999999;
 
-    /* 💔수직가운데정렬안됐음 - 검사창 확인 -높이값 등등 확인하고 여백(높이값) 속성 추가 시켜주기 */
 }
 
+.header .menu .menu_close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    margin: 20px;
+    img {
+        width: 100%;
+    }
+}
 
-/* .header end */
+.header .menu ul li {
+    margin: 30px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 
 
 .main_visual {
@@ -80,7 +102,6 @@ body {
 }
 
 .main_visual div {
-    /* width: 312px; */
     width: 100%;
     padding: 0 40px;
     color: #fff;
@@ -96,8 +117,6 @@ body {
     margin-bottom: 30px;
 }
 
-/* .main_visual end */
-
 .cont01 {
     margin: 60px 0;
 }
@@ -109,25 +128,12 @@ body {
 }
 
 .cont01 .list .item {
-    /* width: 172px; */
-    /* width: 49%; */
     width: calc(100% / 2 - 7px);
-    /* (화면비율 100%에서 반을해서 마진값 7px를 가진 값) */
-
-    /* 
-    calc => margin의 간격 고정
-    (화면비율 100%에서 반을해서 마진값 7px를 가진 값)
-     %   => 사이 간격도 조정
-    */
     margin-bottom: 20px;
 }
 
 .cont01 .list .item div {
     margin-top: 10px;
-}
-
-.cont01 .list .item div h4 {
-    /* 폰트크기 기본값 16px (작성생략 가능) */
 }
 
 .cont01 .list .item div p {
@@ -148,7 +154,6 @@ body {
     object-fit: cover;
 }
 
-/* .cont01 end */
 
 .cont02 {
     margin: 60px 0;
@@ -171,7 +176,6 @@ body {
 }
 
 .cont02 .item .info {
-    /* 텍스트가 가지는 영역엔 높이값 설정하지 않고 패딩을 쓰는게 좋음 */
     padding: 15px;
 }
 
@@ -184,21 +188,13 @@ body {
     margin-top: 10px;
     display: flex;
     align-items: center;
-    /* 아이콘과 텍스트 정렬 */
 }
 
-.cont02 .item .info div img {
-    /* 크기가 다를경우
-    로고/아이콘의 경우 가로/세로 중 1개만 적용시켜줌 */
-}
 
 .cont02 .item .info div span {
     font-size: 12px;
     margin-left: 5px;
 }
-
-
-/* .cont02 end */
 
 
 .cont03 {
@@ -214,7 +210,6 @@ body {
 }
 
 .cont03 .slide_wrap .swiper-slide {
-    /* 슬라이더는 자체적으롷 width값을 가짐 */
     border-radius: 10px;
     overflow: hidden;
     background-color: rgb(32, 32, 32);
@@ -250,14 +245,12 @@ body {
     margin-left: 5px;
 }
 
-/* .swiper-pagination-bullet설정 */
 .cont03 .slide_wrap {
     position: relative;
 }
 
 .cont03 .slide_wrap .swiper {
     position: static;
-    /* 포지션 해제 */
 }
 
 .cont03 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -287,13 +280,9 @@ body {
 }
 
 
-/* 화면의 크기가 641이상일 때 변화
-미디어쿼리 사용 */
+
 @media screen and (min-width:641px) {
-    /* 실행코드 */
     #wrap {
-        /* background-color: rgb(199, 255, 252);
-        color: #333; */
         max-width: 100%;
     }
 
@@ -303,8 +292,6 @@ body {
 
     .cont01 .list .item {
     width: calc(100% / 4 - 7px);
-    /* width: 24%; */
     }
-
 
 }/* min 641 */

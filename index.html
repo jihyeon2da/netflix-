@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>모바일화면</title>
-     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/044.css">
 </head>
-<body>
-    <!-- https://www.figma.com/file/0HOYAK7cRVCxpXgf8vHgOI/%EB%B0%98%EC%9D%91%ED%98%95-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%8B%9C%EC%9E%91-(Copy)?type=design&node-id=0-1&mode=design&t=YfhbEim7U4je2qz1-0 -->
 
+<script src="lib/jquery-3.7.1.min.js"></script>
+<script>
+    $(function(){
+        $('.menu_open').click(function(){
+            $('.menu').animate({
+                'right' : '0'
+            },1000)
+        });
+
+        $(function(){
+            $('.menu_close').click(function(){
+                $('.menu').animate({
+                'right' : '-100%'
+            },1000)
+            })
+        });
+
+    });//end
+</script>
+<body>
     <div id="wrap">
         <header class="header" id="header">
             <div class="inner">
@@ -21,10 +38,24 @@
                 </h1>
 
                 <div class="menu_open">
-                    <img src="img_icon/menu_fff.png" alt="menu icon" /> 
+                    <img src="img_icon/menu_fff.png" alt="menu open" /> 
                 </div><!-- .menu_open -->
             </div><!-- .inner end -->
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOT</a></li>
+                    <li><a href="#">ORIGINAL</a></li>
+                    <li><a href="#">한국영화</a></li>
+                    <li><a href="#">미국영화</a></li>
+                    <li><a href="#">한국드라마</a></li>
+                    <li><a href="#">미국드라마</a></li>
+                </ul>
+                <div class="menu_close">
+                    <img src="img_icon/menu_close.png" alt="menu close">
+                </div><!-- .menu_close end -->
+            </div><!-- .menu end -->
         </header><!-- .header end -->
+
 
 
         <main id="main">
@@ -226,7 +257,7 @@
         </main><!-- #main end -->
 
         <footer class="footer">
-            <p>@jihyeon2da</p>
+            <p>COPYRIHT ©2024. netflix All Right Reserved.</p>
         </footer><!-- .footer end -->
 
     </div><!-- #wrap end -->
