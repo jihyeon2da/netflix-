@@ -1,2 +1,2 @@
 # netflix-
-netflix 반응형 연습
+netflix 반응형
